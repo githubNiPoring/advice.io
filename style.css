@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&display=swap");
+
+:root {
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-blue);
+  line-height: 2;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.advice {
+  background: var(--dark-grayish-blue);
+  border-radius: 25px;
+  padding: 20px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px;
+}
+.advice h4 {
+  color: var(--neon-green);
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+.advice .advice-text {
+  color: var(--light-cyan);
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.divider {
+  margin-bottom: 30px;
+  display: block;
+}
+.divider-mobile {
+  display: none;
+}
+.advice .randomizer {
+  background: var(--neon-green);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -17px;
+
+  box-shadow: 0 var(--neon-green);
+  transition: box-shadow 0.3s ease;
+}
+.advice .randomizer:hover {
+  box-shadow: 0px 0px 10px 3px var(--neon-green);
+}
+.advice .randomizer img {
+  width: 17px;
+}
+
+@media only screen and (max-width: 490px) {
+  .divider {
+    display: none;
+  }
+  .divider-mobile {
+    margin-bottom: 30px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  .divider-mobile {
+    display: none;
+  }
+}
